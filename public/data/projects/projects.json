@@ -30,7 +30,7 @@
         "title": "OpenStreetMap HOT",
         "subtitle": "Road",
         "url": "http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-        "isDefault": true,
+        "isDefault": false,
         "minZoom": 0,
         "maxZoom": 19,
         "cesium_url": "http://c.tile.openstreetmap.fr/hot/",
@@ -104,7 +104,7 @@
         "preview": "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/11/673/1051.png"
     }, {
         "title": "Positron",
-        "isDefault": false,
+        "isDefault": true,
         "subtitle": "From CartoDB",
         "subdomains": ["a", "b", "c", "d"],
         "minZoom": 0,

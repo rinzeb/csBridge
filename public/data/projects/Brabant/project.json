@@ -24,7 +24,7 @@
                     "enabled": false,
                     "description": "Units",
                     "dynamicResource": false,
-                    "defaultFeatureType": "Unit_{color}",
+                    "defaultFeatureType": "Unit_{COLOR}",
                     "typeUrl": "data/resourceTypes/unit_objects.json",
                     "opacity": 99,
                     "type": "dynamicgeojson",

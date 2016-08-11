@@ -11,7 +11,6 @@ interface Unit {
     name: string;
     geometry: csComp.Services.IGeoJsonGeometry;
     lastUpdated: number;
-    color: number;
 }
 
 interface CustomTime {
@@ -67,12 +66,12 @@ export class SimulationPlayer {
     private parseScenario(data) {
         var lines = data.split('\n');
         var headers = lines.splice(0, 1);
-        this.activeScenario.headers = headers;
+        this.activeScenario.headers = headers[0].split(';');
         this.activeScenario.lines = lines;
     }
 
     private processTillTime(maxTime: number, initial: boolean = false) {
-        console.log("Process till " + maxTime);
+        console.log("Process till " + maxTime + ". # Lines: " + this.activeScenario.lines.length);
         //Process every line that has a timeStamp lower or equal than the max time.
         var lastLine = 0;
         this.activeScenario.lines.every((line: string, index: number) => {
@@ -93,8 +92,11 @@ export class SimulationPlayer {
                 switch (+cols[1]) {
                     case 0:
                     case 1:
-                        let unit: Unit = { name: cols[3], geometry: this.parseGeometry(cols[15]), color: +cols[10], lastUpdated: seconds - this.activeScenario.fileStartTime };
-                        this.features[unit.name] = <any>{ id: unit.name, geometry: unit.geometry, type: "Feature", properties: { Name: unit.name, lastUpdated: unit.lastUpdated, color: unit.color, featureTypeId: "Unit_{color}" } };
+                        let unit: Unit = { name: cols[3], geometry: this.parseGeometry(cols[15]), lastUpdated: (seconds - this.activeScenario.fileStartTime) * 1000 };
+                        this.features[unit.name] = <any>{ id: unit.name, geometry: unit.geometry, type: "Feature", properties: { Name: unit.name, lastUpdated: unit.lastUpdated} };
+                        this.activeScenario.headers.forEach((h, ind) => {
+                            this.features[unit.name].properties[h] = +cols[ind];
+                        });
                         this.api.updateFeature('unitobjects', this.features[unit.name], <csweb.ApiMeta>{}, () => { });
                         break;
                     default:
@@ -107,13 +109,13 @@ export class SimulationPlayer {
             }
         });
         this.activeScenario.lines.splice(0, lastLine);
-        if (this.activeScenario.lines.length <= 0) {
+        if (this.activeScenario.lines.length <= 0 || (this.activeScenario.lines.length === 1 && this.activeScenario.lines[0].length < 5)) {
             this.isStarted = false;
             return;
         } else {
             setTimeout(() => {
-                this.processTillTime(maxTime + 600, false);
-            }, 1000);
+                this.processTillTime(maxTime + 900, false);
+            }, 1500);
         }
     }
 

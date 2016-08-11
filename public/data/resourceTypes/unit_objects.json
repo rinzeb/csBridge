@@ -1,354 +1,631 @@
 {
-    "featureTypes" : {
-        "Unit_0" : {
-            "languages" : {
-                "nl" : {
-                    "name" : "Unit"
+    "featureTypes": {
+        "Unit_0": {
+            "languages": {
+                "nl": {
+                    "name": "Unit"
                 },
-                "en" : {
-                    "name" : "Unit"
+                "en": {
+                    "name": "Unit"
                 }
             },
-            "style" : {
-                "fillColor" : "#ffffffff",
-                "strokeColor" : "#0000ff",
-                "selectedStrokeColor" : "#0000ff",
-                "strokeWidth" : 4,
-                "iconWidth" : 24,
-                "iconHeight" : 24,
-                "iconUri" : "images/tank.png",
-                "opacity" : 1,
-                "fillOpacity" : 0.9,
-                "nameLabel" : "Name",
-                "maxTitleResolution" : -1
+            "style": {
+                "fillColor": "#ffffffff",
+                "strokeColor": "#0000ff",
+                "selectedStrokeColor": "#0000ff",
+                "strokeWidth": 4,
+                "iconWidth": 24,
+                "iconHeight": 24,
+                "iconUri": "images/tank.png",
+                "opacity": 1,
+                "fillOpacity": 0.9,
+                "nameLabel": "Name",
+                "maxTitleResolution": -1
             },
-            "propertyTypeKeys" : "LocatieID;Name;color;Straat;Postcode;Huisnummer;Plaats;Aantal_app;Bouwjaar;_dep_water;_dep_features;_dep_UPS;willFailAt;",
-            "name" : "Tank",
-            "showAllProperties" : true
+            "propertyTypeKeys": "TIMESTAMP;lastUpdated;FIELDTYPE;ID_UNIQUE;ID_NAME;CATEGORIE;TIME;BEGINPL;EINDPL;EFFECTIV;MEANT_FOR;COLOR;PLACEDBY;ID_HEADER;ID_KIND;ID_LEVEL;HUIDPLAATS;PLNASTEP;DOEL1;DOEL2;DOEL3;ONDERVUUR;GEVBEREID;TOEKSTATUS;EORDER;WILBEWEG;SNELHEID;NDSNELHEID;DSNELHEID;ORGSTERKTE;INZETB;INZLOSS;LOSS;TERINFLUEN;FIG_ENABL;FIG_MAX;FIG_REMAIN;FIG_RECHAR;OBST_ENABL;OBST_WAIT;OBST_NAME;OBST_DELAY;DIG_ENABL;DIG_STATUS;DIG_MAXTIM;DIG_REMTIM;ART_ENABL;ART_RANGE;ART_MAXFIR;ART_LEFTFI;ART_AMMOK1;ART_AMMOK2;ART_AMMOK3;ART_AMMOK4;ART_AMMOK5;DET_ENABL;DET_MAX;DET_CURREN;INT_ENABL;INT_MAX;INT_CURREN;DEP_ENABL;DEP_KIND;NOT_ENABL;NOT_STATUS;NOT_TIME;NOT_DEST;FRO_ENABL;FRO_CHANGI;FRO_CURREN;FRO_FUTURE;FRO_TIMMAX;FRO_TIMREM;OGRAAD;OSTATUS;AMMOKIND;TEXT;"
         },
-        "Unit_1" : {
-            "languages" : {
-                "nl" : {
-                    "name" : "Unit"
+        "Unit_1": {
+            "languages": {
+                "nl": {
+                    "name": "Unit"
                 },
-                "en" : {
-                    "name" : "Unit"
+                "en": {
+                    "name": "Unit"
                 }
             },
-            "style" : {
-                "fillColor" : "#ffffffff",
-                "strokeColor" : "#ff0000",
-                "selectedStrokeColor" : "#ff0000",
-                "strokeWidth" : 4,
-                "iconWidth" : 24,
-                "iconHeight" : 24,
-                "iconUri" : "images/tank.png",
-                "opacity" : 0.9,
-                "fillOpacity" : 0.9,
-                "nameLabel" : "Name",
-                "maxTitleResolution" : -1
+            "style": {
+                "fillColor": "#ffffffff",
+                "strokeColor": "#ff0000",
+                "selectedStrokeColor": "#ff0000",
+                "strokeWidth": 4,
+                "iconWidth": 24,
+                "iconHeight": 24,
+                "iconUri": "images/tank.png",
+                "opacity": 0.9,
+                "fillOpacity": 0.9,
+                "nameLabel": "Name",
+                "maxTitleResolution": -1
             },
-            "propertyTypeKeys" : "LocatieID;Name;color;Straat;Postcode;Huisnummer;Plaats;Aantal_app;Bouwjaar;UPS;_dep_water;_dep_features;_dep_UPS;willFailAt;",
-            "name" : "Tank"
+            "propertyTypeKeys": "TIMESTAMP;lastUpdated;FIELDTYPE;ID_UNIQUE;ID_NAME;CATEGORIE;TIME;BEGINPL;EINDPL;EFFECTIV;MEANT_FOR;COLOR;PLACEDBY;ID_HEADER;ID_KIND;ID_LEVEL;HUIDPLAATS;PLNASTEP;DOEL1;DOEL2;DOEL3;ONDERVUUR;GEVBEREID;TOEKSTATUS;EORDER;WILBEWEG;SNELHEID;NDSNELHEID;DSNELHEID;ORGSTERKTE;INZETB;INZLOSS;LOSS;TERINFLUEN;FIG_ENABL;FIG_MAX;FIG_REMAIN;FIG_RECHAR;OBST_ENABL;OBST_WAIT;OBST_NAME;OBST_DELAY;DIG_ENABL;DIG_STATUS;DIG_MAXTIM;DIG_REMTIM;ART_ENABL;ART_RANGE;ART_MAXFIR;ART_LEFTFI;ART_AMMOK1;ART_AMMOK2;ART_AMMOK3;ART_AMMOK4;ART_AMMOK5;DET_ENABL;DET_MAX;DET_CURREN;INT_ENABL;INT_MAX;INT_CURREN;DEP_ENABL;DEP_KIND;NOT_ENABL;NOT_STATUS;NOT_TIME;NOT_DEST;FRO_ENABL;FRO_CHANGI;FRO_CURREN;FRO_FUTURE;FRO_TIMMAX;FRO_TIMREM;OGRAAD;OSTATUS;AMMOKIND;TEXT;"
         },
-        "Unit_2" : {
-            "languages" : {
-                "nl" : {
-                    "name" : "Unit"
+        "Unit_2": {
+            "languages": {
+                "nl": {
+                    "name": "Unit"
                 },
-                "en" : {
-                    "name" : "Unit"
+                "en": {
+                    "name": "Unit"
                 }
             },
-            "style" : {
-                "fillColor" : "#ffffffff",
-                "strokeColor" : "#00ff00",
-                "selectedStrokeColor" : "#00ff00",
-                "strokeWidth" : 4,
-                "iconWidth" : 24,
-                "iconHeight" : 24,
-                "iconUri" : "images/tank.png",
-                "opacity" : 0.9,
-                "fillOpacity" : 0.9,
-                "nameLabel" : "Name",
-                "maxTitleResolution" : -1
+            "style": {
+                "fillColor": "#ffffffff",
+                "strokeColor": "#00ff00",
+                "selectedStrokeColor": "#00ff00",
+                "strokeWidth": 4,
+                "iconWidth": 24,
+                "iconHeight": 24,
+                "iconUri": "images/tank.png",
+                "opacity": 0.9,
+                "fillOpacity": 0.9,
+                "nameLabel": "Name",
+                "maxTitleResolution": -1
             },
-            "propertyTypeKeys" : "LocatieID;Name;color;Straat;Postcode;Huisnummer;Plaats;Aantal_app;Bouwjaar;_dep_water;_dep_features;_dep_UPS;willFailAt;",
-            "name" : "Tank"
+            "propertyTypeKeys": "TIMESTAMP;lastUpdated;FIELDTYPE;ID_UNIQUE;ID_NAME;CATEGORIE;TIME;BEGINPL;EINDPL;EFFECTIV;MEANT_FOR;COLOR;PLACEDBY;ID_HEADER;ID_KIND;ID_LEVEL;HUIDPLAATS;PLNASTEP;DOEL1;DOEL2;DOEL3;ONDERVUUR;GEVBEREID;TOEKSTATUS;EORDER;WILBEWEG;SNELHEID;NDSNELHEID;DSNELHEID;ORGSTERKTE;INZETB;INZLOSS;LOSS;TERINFLUEN;FIG_ENABL;FIG_MAX;FIG_REMAIN;FIG_RECHAR;OBST_ENABL;OBST_WAIT;OBST_NAME;OBST_DELAY;DIG_ENABL;DIG_STATUS;DIG_MAXTIM;DIG_REMTIM;ART_ENABL;ART_RANGE;ART_MAXFIR;ART_LEFTFI;ART_AMMOK1;ART_AMMOK2;ART_AMMOK3;ART_AMMOK4;ART_AMMOK5;DET_ENABL;DET_MAX;DET_CURREN;INT_ENABL;INT_MAX;INT_CURREN;DEP_ENABL;DEP_KIND;NOT_ENABL;NOT_STATUS;NOT_TIME;NOT_DEST;FRO_ENABL;FRO_CHANGI;FRO_CURREN;FRO_FUTURE;FRO_TIMMAX;FRO_TIMREM;OGRAAD;OSTATUS;AMMOKIND;TEXT;"
         }
     },
-    "propertyTypeData" : {
-        "color" : {
-            "label" : "color",
-            "title" : "Color",
-            "type" : "options",
-            "options" : ["BLUE", "RED", "GREEN"],
-            "visibleInCallOut" : true,
-            "canEdit" : false
+    "propertyTypeData": {
+        "COLOR": {
+            "label": "COLOR",
+            "title": "Color",
+            "type": "options",
+            "options": [
+                "BLUE",
+                "RED",
+                "GREEN"
+            ],
+            "visibleInCallOut": true,
+            "canEdit": false
         },
-        "lastUpdated" : {
-            "label" : "lastUpdated",
-            "type" : "number",
-            "title" : "lastUpdated",
-            "stringFormat" : "{0:0,0}",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "minValue" : 0
+        "lastUpdated": {
+            "label": "lastUpdated",
+            "type": "duration",
+            "title": "lastUpdated",
+            "visibleInCallOut": true,
+            "canEdit": false,
+            "isSearchable": false,
+            "minValue": 0
         },
-        "Bouwjaar" : {
-            "label" : "Bouwjaar",
-            "type" : "text",
-            "title" : "Bouwjaar",
-            "stringFormat" : "{0:0,0}",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "minValue" : 1500,
-            "maxValue" : 2050,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Bouwjaar"
+        "TIMESTAMP": {
+            "label": "TIMESTAMP",
+            "title": "TIMESTAMP",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Naam concern" : {
-            "label" : "Naam concern",
-            "title" : "Naam concern",
-            "description" : "Naam van het concern",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Naam concern",
-            "isSearchable" : true
+        "FIELDTYPE": {
+            "label": "FIELDTYPE",
+            "title": "FIELDTYPE",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Name" : {
-            "label" : "Name",
-            "type" : "text",
-            "title" : "Naam",
-            "visibleInCallOut" : false,
-            "canEdit" : false,
-            "isSearchable" : true,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Name"
+        "ID_UNIQUE": {
+            "label": "ID_UNIQUE",
+            "title": "ID_UNIQUE",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Soort locatie" : {
-            "label" : "Soort locatie",
-            "title" : "Soort ziekenhuis",
-            "description" : "Universitair Medisch Centrum, Algemeen ziekenhuis en/of Categoraal ziekenhuis",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Soort locatie",
-            "isSearchable" : true
+        "ID_NAME": {
+            "label": "ID_NAME",
+            "title": "ID_NAME",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Kenmerk locatie" : {
-            "label" : "Kenmerk locatie",
-            "title" : "Kenmerk locatie",
-            "description" : "Kenmerk van de locatie. Buitenpolikliniek/Polikliniek in Gezondheidscentrum =  locatie van een ziekenhuis waar u terecht kunt voor poliklinische zorg, geen sprake van opname of grote operaties. Topklinische opleidingsziekenhuis = toegetreden tot de vereniging van 28 topklinische opleidingsziekenhuizen (STZ ziekenhuizen).",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Kenmerk locatie",
-            "isSearchable" : true
+        "CATEGORIE": {
+            "label": "CATEGORIE",
+            "title": "CATEGORIE",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Ook sector" : {
-            "label" : "Ook sector",
-            "title" : "Ook sector",
-            "description" : "Ook sector bij VVT: Verpleging Verzorging Thuiszorg, bij GHZ: GehandicaptenZorg, bij GGZ: Geestelijke GezondheidsZorg",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Ook sector",
-            "isSearchable" : true
+        "TIME": {
+            "label": "TIME",
+            "title": "TIME",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "KvK" : {
-            "label" : "KvK",
-            "title" : "KvK",
-            "description" : "Kamer van koophandel (kvK) nummer van het concern",
-            "type" : "number",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#KvK"
+        "BEGINPL": {
+            "label": "BEGINPL",
+            "title": "BEGINPL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Rechtspers" : {
-            "label" : "Rechtspers",
-            "type" : "text",
-            "title" : "Rechtspersoon",
-            "visibleInCallOut" : false,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Rechtspers"
+        "EINDPL": {
+            "label": "EINDPL",
+            "title": "EINDPL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "LocatieID" : {
-            "label" : "LocatieID",
-            "description" : "BAG locatie ID.",
-            "type" : "text",
-            "title" : "Locatie ID",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#LocatieID"
+        "EFFECTIV": {
+            "label": "EFFECTIV",
+            "title": "EFFECTIV",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Huisnr" : {
-            "label" : "Huisnr",
-            "type" : "text",
-            "title" : "Huisnummer",
-            "section" : "Adres",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Huisnr"
+        "MEANT_FOR": {
+            "label": "MEANT_FOR",
+            "title": "MEANT_FOR",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Postcode" : {
-            "label" : "Postcode",
-            "type" : "text",
-            "title" : "Postcode",
-            "section" : "Adres",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Postcode"
+        "COLOR": {
+            "label": "COLOR",
+            "title": "COLOR",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Plaats" : {
-            "label" : "Plaats",
-            "type" : "text",
-            "title" : "Plaats",
-            "section" : "Adres",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "isSearchable" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Plaats"
+        "PLACEDBY": {
+            "label": "PLACEDBY",
+            "title": "PLACEDBY",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Aantal locaties" : {
-            "label" : "Aantal locaties",
-            "title" : "Aantal locaties",
-            "description" : "Aantal locaties (incl. hoofdlocatie van concern)",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Aantal locaties",
-            "isSearchable" : true
+        "ID_HEADER": {
+            "label": "ID_HEADER",
+            "title": "ID_HEADER",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Straat" : {
-            "label" : "Straat",
-            "section" : "Adres",
-            "title" : "Straat",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Straat",
-            "isSearchable" : true
+        "ID_KIND": {
+            "label": "ID_KIND",
+            "title": "ID_KIND",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "huisnummer" : {
-            "label" : "huisnummer",
-            "section" : "Adres",
-            "title" : "Huisnummer",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#huisnummer",
-            "isSearchable" : true
+        "ID_LEVEL": {
+            "label": "ID_LEVEL",
+            "title": "ID_LEVEL",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "postcode" : {
-            "label" : "postcode",
-            "section" : "Adres",
-            "title" : "Postcode",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#postcode",
-            "isSearchable" : true
+        "HUIDPLAATS": {
+            "label": "HUIDPLAATS",
+            "title": "HUIDPLAATS",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "plaatsnaam" : {
-            "label" : "plaatsnaam",
-            "section" : "Adres",
-            "title" : "Plaatsnaam",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#plaatsnaam",
-            "isSearchable" : true
+        "PLNASTEP": {
+            "label": "PLNASTEP",
+            "title": "PLNASTEP",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Aantal bedden" : {
-            "label" : "Aantal bedden",
-            "title" : "Aantal bedden",
-            "description" : "Aantal beschikbare bedden voor klinische capaciteiten dag-/deeltijdbehandeling - 2013 (incl. plaatsen cytostaticabehandelingen en dialyses)",
-            "type" : "number",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Aantal bedden"
+        "DOEL1": {
+            "label": "DOEL1",
+            "title": "DOEL1",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Hartbewaking" : {
-            "label" : "Hartbewaking",
-            "title" : "Hartbewaking",
-            "description" : "Waarvan bedden voor hartbewaking",
-            "type" : "number",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Hartbewaking"
+        "DOEL2": {
+            "label": "DOEL2",
+            "title": "DOEL2",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "IC met beademing" : {
-            "label" : "IC met beademing",
-            "title" : "IC met beademing",
-            "description" : "Waarvan bedden voor intensive care met mogelijkheid voor beademing",
-            "type" : "number",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#IC met beademing"
+        "DOEL3": {
+            "label": "DOEL3",
+            "title": "DOEL3",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "IC zonder beademing" : {
-            "label" : "IC zonder beademing",
-            "title" : "IC zonder beademing",
-            "description" : "Waarvan bedden voor intensive care zonder mogelijkheid voor beademing",
-            "type" : "number",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#IC zonder beademing"
+        "ONDERVUUR": {
+            "label": "ONDERVUUR",
+            "title": "ONDERVUUR",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "Spoedeisende hulp" : {
-            "label" : "Spoedeisende hulp",
-            "title" : "Spoedeisende hulp",
-            "description" : "De locatie beschikt over een afdeling spoedeisende hulp - 2013",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "canEdit" : false,
-            "id" : "http://localhost:4567/api/resources/critical_objects#Spoedeisende hulp",
-            "isSearchable" : true
+        "GEVBEREID": {
+            "label": "GEVBEREID",
+            "title": "GEVBEREID",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "UPS" : {
-            "title" : "Noodstroom",
-            "label" : "UPS",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "id" : "http://localhost:4567/api/resources/critical_objects#UPS",
-            "canEdit" : false,
-            "isSearchable" : true
+        "TOEKSTATUS": {
+            "label": "TOEKSTATUS",
+            "title": "TOEKSTATUS",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "dependencies" : {
-            "title" : "Afhankelijkheden",
-            "label" : "dependencies",
-            "type" : "text",
-            "visibleInCallOut" : true,
-            "id" : "http://localhost:4567/api/resources/critical_objects#dependencies",
-            "canEdit" : false,
-            "isSearchable" : true
+        "EORDER": {
+            "label": "EORDER",
+            "title": "EORDER",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
         },
-        "willFailAt" : {
-            "languages" : {
-                "nl" : {
-                    "title" : "Gaat falen om"
-                },
-                "en" : {
-                    "title" : "Will fail at"
-                }
-            },
-            "label" : "willFailAt",
-            "type" : "date",
-            "stringFormat" : "DD MM YYYY, H:mm",
-            "visibleInCallOut" : true,
-            "id" : "http://localhost:4567/api/resources/critical_objects#willFailAt",
-            "title" : "Will fail at",
-            "canEdit" : false
+        "WILBEWEG": {
+            "label": "WILBEWEG",
+            "title": "WILBEWEG",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "SNELHEID": {
+            "label": "SNELHEID",
+            "title": "SNELHEID",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "NDSNELHEID": {
+            "label": "NDSNELHEID",
+            "title": "NDSNELHEID",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DSNELHEID": {
+            "label": "DSNELHEID",
+            "title": "DSNELHEID",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ORGSTERKTE": {
+            "label": "ORGSTERKTE",
+            "title": "ORGSTERKTE",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "INZETB": {
+            "label": "INZETB",
+            "title": "INZETB",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "INZLOSS": {
+            "label": "INZLOSS",
+            "title": "INZLOSS",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "LOSS": {
+            "label": "LOSS",
+            "title": "LOSS",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "TERINFLUEN": {
+            "label": "TERINFLUEN",
+            "title": "TERINFLUEN",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FIG_ENABL": {
+            "label": "FIG_ENABL",
+            "title": "FIG_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FIG_MAX": {
+            "label": "FIG_MAX",
+            "title": "FIG_MAX",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FIG_REMAIN": {
+            "label": "FIG_REMAIN",
+            "title": "FIG_REMAIN",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FIG_RECHAR": {
+            "label": "FIG_RECHAR",
+            "title": "FIG_RECHAR",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OBST_ENABL": {
+            "label": "OBST_ENABL",
+            "title": "OBST_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OBST_WAIT": {
+            "label": "OBST_WAIT",
+            "title": "OBST_WAIT",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OBST_NAME": {
+            "label": "OBST_NAME",
+            "title": "OBST_NAME",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OBST_DELAY": {
+            "label": "OBST_DELAY",
+            "title": "OBST_DELAY",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DIG_ENABL": {
+            "label": "DIG_ENABL",
+            "title": "DIG_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DIG_STATUS": {
+            "label": "DIG_STATUS",
+            "title": "DIG_STATUS",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DIG_MAXTIM": {
+            "label": "DIG_MAXTIM",
+            "title": "DIG_MAXTIM",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DIG_REMTIM": {
+            "label": "DIG_REMTIM",
+            "title": "DIG_REMTIM",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_ENABL": {
+            "label": "ART_ENABL",
+            "title": "ART_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_RANGE": {
+            "label": "ART_RANGE",
+            "title": "ART_RANGE",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_MAXFIR": {
+            "label": "ART_MAXFIR",
+            "title": "ART_MAXFIR",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_LEFTFI": {
+            "label": "ART_LEFTFI",
+            "title": "ART_LEFTFI",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_AMMOK1": {
+            "label": "ART_AMMOK1",
+            "title": "ART_AMMOK1",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_AMMOK2": {
+            "label": "ART_AMMOK2",
+            "title": "ART_AMMOK2",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_AMMOK3": {
+            "label": "ART_AMMOK3",
+            "title": "ART_AMMOK3",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_AMMOK4": {
+            "label": "ART_AMMOK4",
+            "title": "ART_AMMOK4",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "ART_AMMOK5": {
+            "label": "ART_AMMOK5",
+            "title": "ART_AMMOK5",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DET_ENABL": {
+            "label": "DET_ENABL",
+            "title": "DET_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DET_MAX": {
+            "label": "DET_MAX",
+            "title": "DET_MAX",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DET_CURREN": {
+            "label": "DET_CURREN",
+            "title": "DET_CURREN",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "INT_ENABL": {
+            "label": "INT_ENABL",
+            "title": "INT_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "INT_MAX": {
+            "label": "INT_MAX",
+            "title": "INT_MAX",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "INT_CURREN": {
+            "label": "INT_CURREN",
+            "title": "INT_CURREN",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DEP_ENABL": {
+            "label": "DEP_ENABL",
+            "title": "DEP_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "DEP_KIND": {
+            "label": "DEP_KIND",
+            "title": "DEP_KIND",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "NOT_ENABL": {
+            "label": "NOT_ENABL",
+            "title": "NOT_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "NOT_STATUS": {
+            "label": "NOT_STATUS",
+            "title": "NOT_STATUS",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "NOT_TIME": {
+            "label": "NOT_TIME",
+            "title": "NOT_TIME",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "NOT_DEST": {
+            "label": "NOT_DEST",
+            "title": "NOT_DEST",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_ENABL": {
+            "label": "FRO_ENABL",
+            "title": "FRO_ENABL",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_CHANGI": {
+            "label": "FRO_CHANGI",
+            "title": "FRO_CHANGI",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_CURREN": {
+            "label": "FRO_CURREN",
+            "title": "FRO_CURREN",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_FUTURE": {
+            "label": "FRO_FUTURE",
+            "title": "FRO_FUTURE",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_TIMMAX": {
+            "label": "FRO_TIMMAX",
+            "title": "FRO_TIMMAX",
+            "type": "number",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "FRO_TIMREM": {
+            "label": "FRO_TIMREM",
+            "title": "FRO_TIMREM",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OGRAAD": {
+            "label": "OGRAAD",
+            "title": "OGRAAD",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "OSTATUS": {
+            "label": "OSTATUS",
+            "title": "OSTATUS",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "AMMOKIND": {
+            "label": "AMMOKIND",
+            "title": "AMMOKIND",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
+        },
+        "TEXT": {
+            "label": "TEXT",
+            "title": "TEXT",
+            "type": "text",
+            "visibleInCallOut": true,
+            "canEdit": true
         }
-    },
-    "id" : "unit_objects",
-    "propertyTypes" : {},
-    "url" : "http://localhost:4567/api/resources/critical_objects",
-    "title" : "http://localhost:4567/api/resources/critical_objects"
+    }
 }
