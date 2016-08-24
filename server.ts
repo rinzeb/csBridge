@@ -12,7 +12,7 @@ Winston.add(Winston.transports.Console, <Winston.ConsoleTransportOptions>{
 var startDatabaseConnection = false;
 
 var cs = new csweb.csServer(__dirname, <csweb.csServerOptions>{
-    port: 3003,
+    port: 3005,
     swagger: false,
     //connectors: { mqtt: { server: 'localhost', port: 1883 }, mongo: { server : '127.0.0.1', port: 27017} }
 });
@@ -26,10 +26,37 @@ cs.start(() => {
     }
 
     var simPlayer = new SimPlayer.SimulationPlayer('unitobjects', cs.api);
-    cs.server.get('/playSimulation', (req, res) => {
-        simPlayer.play('data/run1rd.csv');
-        res.status(200).send({ "features": [], "type": "FeatureCollection" });
-        res.end();
+    cs.server.post('/playSimulation', (req, res) => {
+        if (req.body && req.body.command && req.body.command === 'play') {
+            simPlayer.play();
+            res.status(200).send({ "features": [], "type": "FeatureCollection" });
+            res.end();
+        } else if (req.body && req.body.command && req.body.command === 'pause') {
+            simPlayer.pause();
+            res.status(200).send({ "features": [], "type": "FeatureCollection" });
+            res.end();
+        } else {
+            res.status(404).send({});
+            res.end();
+        }
+    });
+
+    cs.server.post('/loadSimulation', (req, res) => {
+        if (req.body && req.body.simulationName) {
+            simPlayer.load(req.body.simulationName, (code) => {
+                if (code === 0) {
+                    res.status(200).send({ "features": [], "type": "FeatureCollection" });
+                    res.end();
+                } else {
+                    res.status(404).send({});
+                    res.end();
+                }
+            });
+        } else {
+            console.log(`Filename not found in request.`);
+            res.status(404).send({});
+            res.end();
+        }
     });
 
     console.log('really started');

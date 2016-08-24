@@ -21,7 +21,7 @@
                 {
                     "id": "unitobjects",
                     "title": "Units",
-                    "enabled": false,
+                    "enabled": true,
                     "description": "Units",
                     "dynamicResource": false,
                     "defaultFeatureType": "Unit_{COLOR}",
@@ -30,7 +30,6 @@
                     "type": "dynamicgeojson",
                     "storage": "file",
                     "url": "/data/projects/Brabant/unitobjects.json",
-                    "url": "/playSimulation",
                     "isDynamic": false
                 }
             ]
@@ -42,11 +41,54 @@
             "name": "Home",
             "showMap": true,
             "showTimeline": true,
-            "showLeftmenu": true,
+            "showLeftmenu": false,
             "showLegend": false,
             "showRightmenu": false,
             "showBackgroundImage": false,
-            "widgets": [],
+            "widgets": [
+                {
+                    "id": "postman_id",
+                    "directive": "postman",
+                    "elementId": "widget-postman_id",
+                    "enabled": true,
+                    "top": "100px",
+                    "left": "25px",
+                    "width": "300px%",
+                    "height": "180px",
+                    "data": {
+                        "smallSize": true,
+                        "messages": [
+                            {
+                                "name": "Load Brabant scenario",
+                                "httpMethod": {
+                                    "name": "POST"
+                                },
+                                "description": "Load a scenario in the Brabant area.",
+                                "message": "{ \"simulationName\": \"test3\" }",
+                                "url": "/loadSimulation"
+                            },
+                            {
+                                "name": "Play loaded scenario",
+                                "httpMethod": {
+                                    "name": "POST"
+                                },
+                                "description": "Play the last loaded scenario.",
+                                "message": "{ \"command\": \"play\" }",
+                                "url": "/playSimulation"
+                            },
+                            {
+                                "name": "Pause scenario",
+                                "httpMethod": {
+                                    "name": "POST"
+                                },
+                                "description": "Pause the loaded scenario.",
+                                "message": "{ \"command\": \"pause\" }",
+                                "url": "/playSimulation"
+                            }
+                        ]
+                    }
+                }
+            ],
             "mobile": true
         },
         {

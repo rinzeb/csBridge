@@ -3,6 +3,7 @@ import path = require('path');
 import Winston = require('winston');
 import async = require('async');
 import proj4 = require('proj4');
+import exec = require('child_process');
 
 import csweb = require('csweb');
 import _ = require('underscore');
@@ -26,6 +27,8 @@ interface CustomTime {
  *
  */
 export class SimulationPlayer {
+    public static BridgeConverterFolder = path.join('BridgeConverter','bin','Debug');
+    public static DataFolder = path.join(__dirname, '..', 'data');
     private activeScenario: {
         startTime: Date,
         file: string,
@@ -44,16 +47,33 @@ export class SimulationPlayer {
         this.features = {};
     }
 
-    public play(file: string) {
-        if (this.isStarted === true) {
+    public load(file: string, cb: Function) {
+        this.activeScenario = <any>{};        
+        var process = exec.spawn(path.join(SimulationPlayer.BridgeConverterFolder, 'BridgeConverter.exe'), [path.join(SimulationPlayer.DataFolder, file) + '.dbf'], { cwd: SimulationPlayer.DataFolder });
+            process.stderr.on('data', (data) => {
+                console.log(data.toString());
+            });
+            process.stdout.on('data', (data) => {
+                console.log(data.toString());
+            });
+            process.on('close', (code) => {
+                if (code === 0) {
+                    this.activeScenario.file = file;
+                }
+                cb(code);
+            });
+    }
+
+    public play() {
+        if (this.isStarted === true || !this.activeScenario.file) {
             return;
         }
+        let file = this.activeScenario.file + '.csv';
         fs.readFile(file, 'utf8', (err: NodeJS.ErrnoException, data: string) => {
             if (err) {
                 Winston.error(`Error reading file: ${err}.`);
                 return;
             }
-            this.activeScenario.file = file;
             Winston.info(`Read ${file}.`);
             this.parseScenario(data);
             this.isStarted = true;
@@ -61,6 +81,10 @@ export class SimulationPlayer {
                 this.processTillTime(0, true);
             }, 0);
         });
+    }
+
+     public pause() {
+        
     }
 
     private parseScenario(data) {
@@ -93,7 +117,7 @@ export class SimulationPlayer {
                     case 0:
                     case 1:
                         let unit: Unit = { name: cols[3], geometry: this.parseGeometry(cols[15]), lastUpdated: (seconds - this.activeScenario.fileStartTime) * 1000 };
-                        this.features[unit.name] = <any>{ id: unit.name, geometry: unit.geometry, type: "Feature", properties: { Name: unit.name, lastUpdated: unit.lastUpdated} };
+                        this.features[unit.name] = <any>{ id: unit.name, geometry: unit.geometry, type: "Feature", properties: { Name: unit.name, lastUpdated: unit.lastUpdated } };
                         this.activeScenario.headers.forEach((h, ind) => {
                             this.features[unit.name].properties[h] = +cols[ind];
                         });
