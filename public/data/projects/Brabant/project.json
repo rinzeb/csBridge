@@ -5,6 +5,7 @@
     "connected": true,
     "logo": "images/CommonSenseRound.png",
     "useOnlineSearch": false,
+    "eventTab": true,
     "userPrivileges": {
         "mca": {
             "expertMode": true
@@ -54,7 +55,7 @@
                     "top": "100px",
                     "left": "25px",
                     "width": "300px%",
-                    "height": "180px",
+                    "height": "100px",
                     "data": {
                         "smallSize": true,
                         "messages": [
@@ -64,7 +65,7 @@
                                     "name": "POST"
                                 },
                                 "description": "Load a scenario in the Brabant area.",
-                                "message": "{ \"simulationName\": \"test3\" }",
+                                "message": "{ \"simulationName\": \"historytest\" }",
                                 "url": "/loadSimulation"
                             },
                             {

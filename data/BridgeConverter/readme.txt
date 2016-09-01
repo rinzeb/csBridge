@@ -1,0 +1,1 @@
+Gebruik: de exe aanroepen met de naam van het .dbf bestand, er wordt dan een .csv bestand met dezelfde naam (maar extensie .csv) aangemaakt.

@@ -14,3 +14,6 @@ dist/
 
 offline_search_result.json
 simulation/SimulationPlayer.js
+data/Bridge/
+data/BridgeConverter/bin/
+data/BridgeConverter/obj/

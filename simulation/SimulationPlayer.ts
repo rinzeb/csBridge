@@ -27,6 +27,9 @@ interface CustomTime {
  *
  */
 export class SimulationPlayer {
+    
+    public static SPLIT_CHARACTER = ',';
+    
     public static BridgeConverterFolder = path.join('BridgeConverter','bin','Debug');
     public static DataFolder = path.join(__dirname, '..', 'data');
     private activeScenario: {
@@ -39,6 +42,7 @@ export class SimulationPlayer {
     };
     private features: { [id: string]: IFeature };
     private isStarted: boolean = false;
+    private isPaused: boolean = false;
 
     constructor(address: string, private api: csweb.ApiManager) {
         proj4.defs('RD', '+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 ' +
@@ -58,7 +62,7 @@ export class SimulationPlayer {
             });
             process.on('close', (code) => {
                 if (code === 0) {
-                    this.activeScenario.file = file;
+                    this.activeScenario.file = path.join(SimulationPlayer.DataFolder, file);
                 }
                 cb(code);
             });
@@ -77,31 +81,33 @@ export class SimulationPlayer {
             Winston.info(`Read ${file}.`);
             this.parseScenario(data);
             this.isStarted = true;
+            this.isPaused = false;
             setTimeout(() => {
                 this.processTillTime(0, true);
             }, 0);
         });
     }
 
-     public pause() {
-        
+    public pause() {
+        this.isPaused = true;        
     }
 
     private parseScenario(data) {
         var lines = data.split('\n');
         var headers = lines.splice(0, 1);
-        this.activeScenario.headers = headers[0].split(';');
+        this.activeScenario.headers = headers[0].split(SimulationPlayer.SPLIT_CHARACTER);
         this.activeScenario.lines = lines;
     }
 
     private processTillTime(maxTime: number, initial: boolean = false) {
+        if (!this.activeScenario || !this.activeScenario.lines) return;
         console.log("Process till " + maxTime + ". # Lines: " + this.activeScenario.lines.length);
         //Process every line that has a timeStamp lower or equal than the max time.
         var lastLine = 0;
         this.activeScenario.lines.every((line: string, index: number) => {
             if (!line) return false;
             //Parse time
-            let cols = line.split(';');
+            let cols = line.split(SimulationPlayer.SPLIT_CHARACTER);
             if (cols.length < 16) return false;
             let time = cols[0].split(':');
             let customTime: CustomTime = { hours: +time[0], minutes: +time[1], seconds: +time[2] };
@@ -117,6 +123,7 @@ export class SimulationPlayer {
                     case 0:
                     case 1:
                         let unit: Unit = { name: cols[3], geometry: this.parseGeometry(cols[15]), lastUpdated: (seconds - this.activeScenario.fileStartTime) * 1000 };
+                        if (unit.name === 'BLU') unit.name = 'BLUE';//Strange dataset
                         this.features[unit.name] = <any>{ id: unit.name, geometry: unit.geometry, type: "Feature", properties: { Name: unit.name, lastUpdated: unit.lastUpdated } };
                         this.activeScenario.headers.forEach((h, ind) => {
                             this.features[unit.name].properties[h] = +cols[ind];
@@ -137,9 +144,11 @@ export class SimulationPlayer {
             this.isStarted = false;
             return;
         } else {
-            setTimeout(() => {
-                this.processTillTime(maxTime + 900, false);
-            }, 1500);
+            if (!this.isPaused) {
+                setTimeout(() => {
+                    this.processTillTime(maxTime + 900, false);
+                }, 1500);
+            }
         }
     }
 
